@@ -1,0 +1,65 @@
+""" 
+Sarah is a technical writer who is responsible for formatting two important documents. Both documents contain a certain placeholder character that needs to be replaced with another character before they can be finalized. To ensure consistency in formatting, Sarah wants you to help her write a program that processes both documents by replacing the placeholder character with the new one.
+
+
+
+Sarah also prefers a neat and structured output, so she wants you to ensure that both modified documents are printed in a single line, separated by a space, using the format() function.
+
+
+
+Example
+
+
+
+Input:
+
+Hello
+
+World
+
+o
+
+a
+
+Output:
+
+Hella Warld
+
+Explanation:
+
+Here the character 'o' is replaced with 'a' in the concatenated string.
+
+Input format :
+The first line contains string1, the first document.
+
+The second line contains string2, the second document.
+
+The third line contains char1, the placeholder character that needs to be replaced.
+
+The fourth line contains char2, the new character that will replace the placeholder.
+
+Output format :
+The output displays a single line containing the modified string1 and string2, separated by a space."""
+
+
+string1 = input()
+string2 = input()
+char_to_replace = input()
+char_to_replace_with = input()
+
+str1 = ""
+for char in string1:
+    if char == char_to_replace:
+        str1 += char_to_replace_with
+    else:
+        str1 += char
+
+str2 = ""
+for char in string2:
+    if char == char_to_replace:
+        str2 += char_to_replace_with
+    else:
+        str2 += char
+
+result = "{} {}".format(str1, str2)
+print(result)
